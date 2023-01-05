@@ -31,6 +31,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nna-wM-edI"/>
+                    <connections>
+                        <segue destination="BN9-Jm-XX4" kind="show" identifier="toDetailsVC" id="h6h-Dp-1rU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -53,6 +56,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GxP-aW-LpR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.64122137404578" y="3.5211267605633805"/>
+        </scene>
+        <!--DetailsVC-->
+        <scene sceneID="HzB-lW-WOU">
+            <objects>
+                <viewController id="BN9-Jm-XX4" customClass="DetailsVC" customModule="ArtBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FFb-WJ-3NT">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="2vP-Bg-0dN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Cm4-VX-3Bw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uc7-tH-CDT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1868" y="4"/>
         </scene>
     </scenes>
     <resources>
