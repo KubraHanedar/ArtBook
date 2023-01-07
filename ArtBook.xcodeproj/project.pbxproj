@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		410B46192969ADB5005DA85C /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 410B46172969ADB5005DA85C /* 2.png */; };
+		410B461A2969ADB5005DA85C /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 410B46182969ADB5005DA85C /* 5.png */; };
 		413C61EA2967785500CDDCA5 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413C61E92967785500CDDCA5 /* DetailsVC.swift */; };
 		4194AB502967755F0020EF05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194AB4F2967755F0020EF05 /* AppDelegate.swift */; };
 		4194AB522967755F0020EF05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194AB512967755F0020EF05 /* SceneDelegate.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		410B46172969ADB5005DA85C /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		410B46182969ADB5005DA85C /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
 		413C61E92967785500CDDCA5 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		4194AB4C2967755F0020EF05 /* ArtBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4194AB4F2967755F0020EF05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 		4194AB4E2967755F0020EF05 /* ArtBook */ = {
 			isa = PBXGroup;
 			children = (
+				410B46172969ADB5005DA85C /* 2.png */,
+				410B46182969ADB5005DA85C /* 5.png */,
 				4194AB4F2967755F0020EF05 /* AppDelegate.swift */,
 				4194AB512967755F0020EF05 /* SceneDelegate.swift */,
 				4194AB532967755F0020EF05 /* ViewController.swift */,
@@ -132,7 +138,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4194AB5F296775600020EF05 /* LaunchScreen.storyboard in Resources */,
+				410B461A2969ADB5005DA85C /* 5.png in Resources */,
 				4194AB5C296775600020EF05 /* Assets.xcassets in Resources */,
+				410B46192969ADB5005DA85C /* 2.png in Resources */,
 				4194AB572967755F0020EF05 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
