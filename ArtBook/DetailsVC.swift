@@ -24,15 +24,46 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate & UINavigatio
         if chosenPainting != "" {
             //CoreData
             
-            let stringUUID = chosenPaintingId!.uuidString
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
             
-            print(stringUUID)
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Paintings")
+            let idString = chosenPaintingId?.uuidString
+            fetchRequest.predicate = NSPredicate(format: "id = %@", idString!)
+            fetchRequest.returnsObjectsAsFaults = false
+    
+            do {
+                let results = try context.fetch(fetchRequest)
+                
+                if results.count > 0 {
+                    for result in results as! [NSManagedObject] {
+                        if let name = result.value(forKey: "name") as? String {
+                            nameText.text = name
+                        }
+                        if let artist = result.value(forKey: "artist") as? String {
+                            artistText.text = artist
+                        }
+                        if let year = result.value(forKey: "year") as? Int{
+                            yearText.text = String(year)
+                        }
+                        if let imageData = result.value(forKey: "image") as? Data {
+                            let image = UIImage(data: imageData)
+                            imageView.image = image
+                        }
+                    }
+                }
+            } catch{
+                print("error")
+                
+            }
+                
+            } else {
+                nameText.text = ""
+                artistText.text = ""
+                yearText.text = ""
+            }
          
-        } else {
-            nameText.text = ""
-            artistText.text = ""
-            yearText.text = ""
-        }
+      
         
         // RECOGNIZERS
         
