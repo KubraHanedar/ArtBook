@@ -37,10 +37,16 @@ class ViewController: UIViewController, UITableViewDelegate & UITableViewDataSou
     getData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(getData), name: NSNotification.Name(rawValue: "newData"), object: nil)
+    }
+    
     @objc func addButtonClicked(){
          performSegue(withIdentifier: "toDetailsVC", sender: nil)
      }
-    func getData() {
+    
+    
+  @objc  func getData() {
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
