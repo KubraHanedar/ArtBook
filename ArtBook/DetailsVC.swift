@@ -63,6 +63,8 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate & UINavigatio
             }
                 
             } else {
+                saveButton.isHidden = false
+                saveButton.isEnabled = false
                 nameText.text = ""
                 artistText.text = ""
                 yearText.text = ""
@@ -95,6 +97,7 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate & UINavigatio
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         imageView.image = info[.originalImage] as? UIImage
+        saveButton.isEnabled = true
         self.dismiss(animated: true, completion: nil)
     }
     
