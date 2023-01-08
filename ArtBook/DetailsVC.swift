@@ -29,7 +29,7 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate & UINavigatio
             
             let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Paintings")
             let idString = chosenPaintingId?.uuidString
-            fetchRequest.predicate = NSPredicate(format: "id = %@", idString!)
+            fetchRequest.predicate = NSPredicate(format: "id =%@", idString!)
             fetchRequest.returnsObjectsAsFaults = false
     
             do {
@@ -43,7 +43,7 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate & UINavigatio
                         if let artist = result.value(forKey: "artist") as? String {
                             artistText.text = artist
                         }
-                        if let year = result.value(forKey: "year") as? Int{
+                        if let year = result.value(forKey: "year") as? Int {
                             yearText.text = String(year)
                         }
                         if let imageData = result.value(forKey: "image") as? Data {
