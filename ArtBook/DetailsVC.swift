@@ -14,6 +14,8 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate & UINavigatio
     @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var artistText: UITextField!
     @IBOutlet weak var yearText: UITextField!
+    @IBOutlet weak var saveButton: UIButton!
+    
     
     var chosenPainting = ""
     var chosenPaintingId : UUID?
@@ -22,6 +24,9 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate & UINavigatio
         super.viewDidLoad()
         
         if chosenPainting != "" {
+            
+            saveButton.isHidden = true
+            
             //CoreData
             
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
